@@ -2,12 +2,6 @@ module.exports = {
     title: 'Hello WEB',
     description: 'VuePress,Personal Blog,web',
     base: '/blog-demo/', // 基础路径
-    // theme: 'reco', // 主题
-    locales: {
-        '/': {
-          lang: 'zh-CN', // 
-        }
-    },
     head: [
         ['link', {
             rel: 'icon',
@@ -16,12 +10,10 @@ module.exports = {
     ],
     themeConfig: {
         // 导航栏
-        nav: [
-            {
+        nav: [{
                 text: 'Home',
                 link: '/'
             },
-            // 文档
             {
                 text: '文档',
                 items: [
@@ -40,46 +32,13 @@ module.exports = {
                     {
                         text: '文档教程',
                         items: [{
-                                text: 'ES6 入门教程',
+                                text: 'ES6',
                                 link: 'https://es6.ruanyifeng.com/'
                             },
                             {
-                                text: 'Git 中文手册',
-                                link: 'https://git-scm.com/book/zh/v2'
+                                text: 'Vue3',
+                                link: 'https://cn.vuejs.org/'
                             }
-                        ]
-                    },
-                    {
-                        text: '配置相关',
-                        items: [{
-                                text: 'ESLint',
-                                link: 'https://zh-hans.eslint.org/'
-                            },
-                            {
-                                text: 'Babel',
-                                link: 'https://www.babeljs.cn/'
-                            },
-                        ]
-                    },
-                    {
-                        text: '部署相关',
-                        items: [
-                            {
-                                text: 'GitHub Actions文档',
-                                link: 'https://docs.github.com/zh/actions'
-                            },
-                            {
-                                text: 'Docker',
-                                link: 'https://docs.docker.com/get-started/'
-                            },
-                            {
-                                text: 'Nginx中文文档',
-                                link: 'https://blog.redis.com.cn/doc/index.html'
-                            },
-                            {
-                                text: 'Jenkins',
-                                link: 'https://www.jenkins.io/zh/doc/'
-                            },
                         ]
                     },
                     {
@@ -97,8 +56,21 @@ module.exports = {
                 ]
             },
             {
+                text: '哈哈哈',
+                ariaLabel: 'Language Menu',
+                items: [{
+                        text: 'Chinese',
+                        link: '/web/JavaScript/1.笔记.md'
+                    },
+                    {
+                        text: 'Japanese',
+                        link: '/web/Vue/'
+                    }
+                ]
+            },
+            {
                 text: 'GitHub',
-                link: 'https://github.com/aiyun-github'
+                link: 'https://github.com'
             },
         ],
         // 侧边栏
@@ -116,8 +88,8 @@ module.exports = {
               path: '/web/JavaScript/1.笔记',
               collapsable: false, // 不折叠
               children: [
-                { title: "笔记1", path: "/web/JavaScript/1" },
-                { title: "笔记2", path: "/web/JavaScript/1" }
+                { title: "条件类型", path: "/web/JavaScript/1.笔记" },
+                { title: "泛型", path: "/web/JavaScript/1.笔记" }
               ],
             }
           ]

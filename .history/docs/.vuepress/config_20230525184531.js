@@ -2,7 +2,7 @@ module.exports = {
     title: 'Hello WEB',
     description: 'VuePress,Personal Blog,web',
     base: '/blog-demo/', // 基础路径
-    // theme: 'reco', // 主题
+    theme: 'reco', // 主题
     locales: {
         '/': {
           lang: 'zh-CN', // 
@@ -16,12 +16,10 @@ module.exports = {
     ],
     themeConfig: {
         // 导航栏
-        nav: [
-            {
+        nav: [{
                 text: 'Home',
                 link: '/'
             },
-            // 文档
             {
                 text: '文档',
                 items: [
@@ -101,26 +99,7 @@ module.exports = {
                 link: 'https://github.com/aiyun-github'
             },
         ],
-        // 侧边栏
-        sidebar: [
-            {
-                title: '欢迎学习',
-                path: '/',
-                collapsable: false, // 不折叠
-                children: [
-                    { title: "学前必读", path: "/" }
-                ]
-            },
-            {
-              title: "基础学习",
-              path: '/web/JavaScript/1.笔记',
-              collapsable: false, // 不折叠
-              children: [
-                { title: "笔记1", path: "/web/JavaScript/1" },
-                { title: "笔记2", path: "/web/JavaScript/1" }
-              ],
-            }
-          ]
+    
     },
     markdown: { // 配置代码行号
         lineNumbers: true

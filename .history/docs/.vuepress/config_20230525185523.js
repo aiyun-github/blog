@@ -3,11 +3,11 @@ module.exports = {
     description: 'VuePress,Personal Blog,web',
     base: '/blog-demo/', // 基础路径
     // theme: 'reco', // 主题
-    locales: {
-        '/': {
-          lang: 'zh-CN', // 
-        }
-    },
+    // locales: {
+    //     '/': {
+    //       lang: 'zh-CN', // 
+    //     }
+    // },
     head: [
         ['link', {
             rel: 'icon',

@@ -116,8 +116,8 @@ module.exports = {
               path: '/web/JavaScript/1.笔记',
               collapsable: false, // 不折叠
               children: [
-                { title: "笔记1", path: "/web/JavaScript/1" },
-                { title: "笔记2", path: "/web/JavaScript/1" }
+                { title: "笔记1", path: "/web/JavaScript/1.笔记" },
+                { title: "笔记2", path: "/web/JavaScript/1.笔记" }
               ],
             }
           ]

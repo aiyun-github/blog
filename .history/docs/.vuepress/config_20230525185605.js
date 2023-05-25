@@ -2,7 +2,7 @@ module.exports = {
     title: 'Hello WEB',
     description: 'VuePress,Personal Blog,web',
     base: '/blog-demo/', // 基础路径
-    // theme: 'reco', // 主题
+    theme: 'reco', // 主题
     locales: {
         '/': {
           lang: 'zh-CN', // 

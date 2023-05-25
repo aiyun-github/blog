@@ -2,12 +2,6 @@ module.exports = {
     title: 'Hello WEB',
     description: 'VuePress,Personal Blog,web',
     base: '/blog-demo/', // 基础路径
-    // theme: 'reco', // 主题
-    locales: {
-        '/': {
-          lang: 'zh-CN', // 
-        }
-    },
     head: [
         ['link', {
             rel: 'icon',
@@ -16,12 +10,10 @@ module.exports = {
     ],
     themeConfig: {
         // 导航栏
-        nav: [
-            {
+        nav: [{
                 text: 'Home',
                 link: '/'
             },
-            // 文档
             {
                 text: '文档',
                 items: [
@@ -65,10 +57,6 @@ module.exports = {
                         text: '部署相关',
                         items: [
                             {
-                                text: 'GitHub Actions文档',
-                                link: 'https://docs.github.com/zh/actions'
-                            },
-                            {
                                 text: 'Docker',
                                 link: 'https://docs.docker.com/get-started/'
                             },
@@ -77,8 +65,8 @@ module.exports = {
                                 link: 'https://blog.redis.com.cn/doc/index.html'
                             },
                             {
-                                text: 'Jenkins',
-                                link: 'https://www.jenkins.io/zh/doc/'
+                                text: 'GitHub Actions文档',
+                                link: 'https://docs.github.com/zh/actions'
                             },
                         ]
                     },
@@ -97,8 +85,21 @@ module.exports = {
                 ]
             },
             {
+                text: '哈哈哈',
+                ariaLabel: 'Language Menu',
+                items: [{
+                        text: 'Chinese',
+                        link: '/web/JavaScript/1.笔记.md'
+                    },
+                    {
+                        text: 'Japanese',
+                        link: '/web/Vue/'
+                    }
+                ]
+            },
+            {
                 text: 'GitHub',
-                link: 'https://github.com/aiyun-github'
+                link: 'https://github.com'
             },
         ],
         // 侧边栏
@@ -116,8 +117,8 @@ module.exports = {
               path: '/web/JavaScript/1.笔记',
               collapsable: false, // 不折叠
               children: [
-                { title: "笔记1", path: "/web/JavaScript/1" },
-                { title: "笔记2", path: "/web/JavaScript/1" }
+                { title: "条件类型", path: "/web/JavaScript/1.笔记" },
+                { title: "泛型", path: "/web/JavaScript/1.笔记" }
               ],
             }
           ]
