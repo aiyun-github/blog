@@ -21,6 +21,6 @@ git commit -m 'deploy'
 # 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
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github:aiyun-github/blog-demo.git master:gh-pages
-# 执行该文件：sh deploy.sh
+
 
 cd -
