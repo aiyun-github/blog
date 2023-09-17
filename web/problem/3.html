@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. 树搜索、查看已选 | Hello WEB</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/blog/favicon.svg">
+    <meta name="description" content="VuePress,Personal Blog,web">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6b82f87.css" as="style"><link rel="preload" href="/blog/assets/js/app.31c239b1.js" as="script"><link rel="preload" href="/blog/assets/js/2.54c8d609.js" as="script"><link rel="preload" href="/blog/assets/js/1.52d342e4.js" as="script"><link rel="preload" href="/blog/assets/js/28.bd8c8219.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.41ba9665.js"><link rel="prefetch" href="/blog/assets/js/11.5e815c2c.js"><link rel="prefetch" href="/blog/assets/js/12.b07064d4.js"><link rel="prefetch" href="/blog/assets/js/13.77912401.js"><link rel="prefetch" href="/blog/assets/js/14.d50691c1.js"><link rel="prefetch" href="/blog/assets/js/15.bd3322d4.js"><link rel="prefetch" href="/blog/assets/js/16.83c1d85e.js"><link rel="prefetch" href="/blog/assets/js/17.3abc90a8.js"><link rel="prefetch" href="/blog/assets/js/18.c8a1c4b9.js"><link rel="prefetch" href="/blog/assets/js/19.d512bd2b.js"><link rel="prefetch" href="/blog/assets/js/20.ef96ad9a.js"><link rel="prefetch" href="/blog/assets/js/21.c2841e22.js"><link rel="prefetch" href="/blog/assets/js/22.0410c39c.js"><link rel="prefetch" href="/blog/assets/js/23.b0cf75d9.js"><link rel="prefetch" href="/blog/assets/js/24.9e3b6e37.js"><link rel="prefetch" href="/blog/assets/js/25.6844f0cc.js"><link rel="prefetch" href="/blog/assets/js/26.6fc7e1a4.js"><link rel="prefetch" href="/blog/assets/js/27.cbc0f2ad.js"><link rel="prefetch" href="/blog/assets/js/29.1bd716dd.js"><link rel="prefetch" href="/blog/assets/js/3.1072175f.js"><link rel="prefetch" href="/blog/assets/js/30.cfbdf04a.js"><link rel="prefetch" href="/blog/assets/js/4.6056c6da.js"><link rel="prefetch" href="/blog/assets/js/5.da26642f.js"><link rel="prefetch" href="/blog/assets/js/6.400e55b5.js"><link rel="prefetch" href="/blog/assets/js/7.b500c015.js"><link rel="prefetch" href="/blog/assets/js/vendors~docsearch.f53cd023.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6b82f87.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Hello WEB</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/web/basic/JS/1.html" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.react.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6 入门教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git 中文手册
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          配置相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.eslint.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ESLint
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Babel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          部署相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://docs.github.com/zh/actions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub Actions文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Docker
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.redis.com.cn/doc/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nginx中文文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jenkins
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          UI组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://ant.design/index-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.antdv.com/components/overview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/aiyun-github" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/web/basic/JS/1.html" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.react.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6 入门教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git 中文手册
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          配置相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.eslint.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ESLint
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Babel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          部署相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://docs.github.com/zh/actions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub Actions文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Docker
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.redis.com.cn/doc/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nginx中文文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jenkins
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          UI组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://ant.design/index-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.antdv.com/components/overview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/aiyun-github" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/basic/JS/1" class="sidebar-heading clickable"><span>基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/arithmetic/数据结构与算法" class="sidebar-heading clickable"><span>算法</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/problem/1" class="sidebar-heading clickable open"><span>踩坑</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/web/problem/1.html" class="sidebar-link">踩坑1</a></li><li><a href="/blog/web/problem/2.html" class="sidebar-link">踩坑2</a></li><li><a href="/blog/web/problem/3.html" aria-current="page" class="active sidebar-link">踩坑3</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/web/problem/3.html#_1-树搜索、查看已选" class="sidebar-link">1. 树搜索、查看已选</a></li></ul></li><li><a href="/blog/web/problem/4.html" class="sidebar-link">踩坑4</a></li><li><a href="/blog/web/problem/5.html" class="sidebar-link">踩坑5</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-树搜索、查看已选"><a href="#_1-树搜索、查看已选" class="header-anchor">#</a> 1. 树搜索、查看已选</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>import { cloneDeep } from 'lodash-es'
+
+export function getTypeById(id) {
+    return id.split('/')[0]
+}
+
+/** 前端树控件是联动的，需要区分半选和权限，此方法用于区分半选和全选 */
+export const getHalfCheckAndCheck = (tree, children = 'children', id = 'uid') =&gt; {
+    let halfCheck = []
+    let check = []
+    if (tree &amp;&amp; tree.length) {
+        tree.forEach((item) =&gt; {
+            if (item.checked) {
+                if (hasChildrenAllChecked(item)) {
+                    check.push(item[id])
+                } else {
+                    halfCheck.push(item[id])
+                }
+                let checkedObj = getHalfCheckAndCheck(item[children], children, id)
+                halfCheck.push(...checkedObj.halfCheck)
+                check.push(...checkedObj.check)
+            }
+        })
+    }
+    return {
+        halfCheck,
+        check
+    }
+}
+
+// 略过第一层
+export const getCheck = (tree, children = 'children', id = 'uid') =&gt; {
+    let halfCheck = []
+    let check = []
+    if (tree &amp;&amp; tree.length) {
+        tree.forEach((item) =&gt; {
+            if (hasChildrenAllChecked(item)) {
+                check.push(item[id])
+            } else {
+                halfCheck.push(item[id])
+            }
+            let checkedObj = getHalfCheckAndCheck(item[children], children, id)
+            halfCheck.push(...checkedObj.halfCheck)
+            check.push(...checkedObj.check)
+        })
+    }
+    return {
+        halfCheck,
+        check
+    }
+}
+
+// flatTree 平铺树
+export const flatTree = (data, id = 'id') =&gt; {
+    const dataList = []
+    for (let i = 0; i &lt; data.length; i++) {
+        const node = data[i]
+        // const key = node[id];
+        dataList.push(node)
+        if (node.children) {
+            const children = flatTree(node.children, node.key);
+            dataList.push(...children)
+        }
+    }
+    return dataList
+}
+
+export const getFilterTreeByName = function(tree, value, arr, name = 'title') {
+    if (!value) {
+        return
+    }
+    let _tree = cloneDeep(tree)
+    _tree.forEach(t =&gt; {
+        // 自己包含的话，子集全包含
+        if (t[name].includes(value)) {
+            arr.push(t)
+        } else {
+            let _children = t.children || []
+            t.children = []
+            if (_children.length) {
+                getFilterTreeByName(_children, value, t.children, name)
+                // 子集有长度的话，自己也是被选中的
+                if (t.children.length) {
+                    arr.push(t)
+                }
+            }
+        }
+    })
+}
+
+/**
+ * 获取选中树
+ * @param {Array} check
+ * @param {Array} halfCheck
+ * @param {Array} tree
+ * @param {String} id
+ */
+export const getCheckedTree = (check, halfCheck = [], tree = [], id = 'uid') =&gt; {
+    let checkTree = []
+    if (tree) {
+        tree.forEach((item) =&gt; {
+            if (check.indexOf('' + item[id]) &gt; -1 || halfCheck.indexOf('' + item[id]) &gt; -1) {
+                checkTree.push({
+                    ...item,
+                    checked: true,
+                    children: getCheckedTree(check, halfCheck, item.children, id)
+                })
+            }
+        })
+    }
+    return checkTree
+}
+
+/**
+ * 获取选中树(第一层略过)
+ * @param {Array} check
+ * @param {Array} halfCheck
+ * @param {Array} tree
+ * @param {String} id
+ * @param {String} id
+ */
+export const getCheckedTree2 = (check, halfCheck = [], tree = [], id = 'uid', parentArray = []) =&gt; {
+    let checkTree = []
+    if (tree) {
+        tree.forEach((item) =&gt; {
+            if (parentArray.indexOf(item[id]) &gt; -1 || (check.indexOf('' + item[id]) &gt; -1 || halfCheck.indexOf('' + item[id])) &gt; -1) {
+                checkTree.push({
+                    ...item,
+                    checked: true,
+                    children: getCheckedTree2(check, halfCheck, item.children, id)
+                })
+            }
+        })
+    }
+    return checkTree
+}
+
+/**
+ * 修改树的checked字段
+ * @param {Array} check
+ * @param {Array} halfCheck
+ * @param {Array} tree
+ * @param {String} id
+ */
+export const setTreeCheck = (resultId = [], tree, id = 'uid') =&gt; {
+    if (tree &amp;&amp; tree.length) {
+        tree.forEach((item) =&gt; {
+            item.checked = resultId.includes('' + item[id])
+            setTreeCheck(resultId, item.children, id)
+        })
+    }
+}
+
+/**
+ * 判断children是否全部勾选
+ * @param {Array} tree
+ * @param {String} children
+ */
+export function hasChildrenAllChecked(tree, children = 'children') {
+    if (!tree || !tree[children] || !tree[children].length) {
+        return true
+    }
+    let flag = true
+    for (let i = 0; i &lt; tree[children].length; i++) {
+        let childrenList = tree[children][i]
+        if (!childrenList.checked) {
+            flag = false
+            break
+        } else if (childrenList.children &amp;&amp; childrenList.children.length &amp;&amp; !hasChildrenAllChecked(childrenList, children)) {
+            flag = false
+            break
+        }
+    }
+    return flag
+}
+
+/**
+ * 获取所有的父节点的id
+ * @param {Array} t
+ * @param {String} children
+ */
+export const getParentNode = function (tree, children = 'children', id = 'uid', parentId = []) {
+    if (tree) {
+        tree.forEach((item) =&gt; {
+            if (item.children) {
+                parentId.push('' + item[id])
+                getParentNode(item.children, children, id, parentId)
+            }
+        })
+    }
+    return parentId
+}
+// tree -&gt; array
+export const generateList = function(tree) {
+    let list = []
+    let fn = function (tree) {
+        list.push(tree)
+        if (tree.children &amp;&amp; tree.children.length) {
+            tree.children.forEach(n =&gt; fn(n))
+        }
+    }
+    fn(tree)
+    return list
+}
+
+// trees -&gt; array
+export const generateListByTrees = function(trees) {
+    let list = []
+    trees.forEach(tree =&gt; {
+        let l = generateList(tree)
+        list = list.concat(l)
+    })
+    return list
+}
+
+// get targetKey's parentKey from tree
+export const getParentKey = (key, tree) =&gt; {
+    let parentKey
+    for (let i = 0; i &lt; tree.length; i++) {
+        const node = tree[i]
+        if (node.children) {
+            if (node.children.some(item =&gt; item.key === key)) {
+                parentKey = node.key
+            } else if (getParentKey(key, node.children)) {
+                parentKey = getParentKey(key, node.children)
+            }
+        }
+    }
+    return parentKey
+}
+
+export function hasChildrenAllNonchecked (t, children = 'children') {
+    if (!t || !t[children]) {
+        return true
+    }
+    let flag = true
+    for (let i = 0; i &lt; t[children].length; i++) {
+        if (t[children][i].checked || !hasChildrenAllNonchecked(t[children][i])) {
+            flag = false
+            break
+        }
+    }
+    return flag
+}
+
+export function traversalTree (data, cb, prev) {
+    cb(data, prev)
+    data.children &amp;&amp; data.children.forEach((child) =&gt; {
+        traversalTree(child, cb, data)
+    })
+}
+/**
+ * 模糊匹配树
+ * @param {Array} tree 需要匹配的树
+ * @param {string} matchKey 需要匹配的字段
+ * @param {string} returnKey 需要返回的字段
+ * @param {string} value 匹配的值
+ */
+
+export function matchKeysInTree(tree, matchKey = 'name', returnKey = 'id', value) {
+    let list = []
+    function find(t) {
+        if (!t) {
+            return
+        }
+        t.map((item) =&gt; {
+            console.log(item, value)
+            if (item[matchKey].includes(value)) {
+                list.push(item[returnKey])
+            }
+            find(item.children)
+        })
+    }
+    find(tree)
+    return list
+}
+/***
+ * 通用接口：
+ * 多层级数据扁平化
+ */
+export const getFlatList = (data = [], dataList = []) =&gt; {
+    if (!data) {
+        return []
+    }
+    const dataListArr = dataList
+    for (let i = 0; i &lt; data.length; i++) {
+        const node = data[i]
+        dataList.push({ ...node, children: null })
+        if (node.children &amp;&amp; node.children.length) {
+            getFlatList(node.children, dataListArr)
+        }
+    }
+    return dataListArr
+}
+
+export const getCheckNode = (data, check, id = 'id') =&gt; {
+    let checkTree = []
+    if (data) {
+        data.forEach((item) =&gt; {
+            if (check.indexOf(item[id]) &gt; -1) {
+                checkTree.push({
+                    ...item,
+                    checked: true,
+                    children: getCheckNode(item.children, check, id)
+                })
+            }
+        })
+    }
+    return checkTree
+}
+
+/**
+ * 设置树的check属性 方便回显
+ * @param check
+ * @param halfCheck
+ * @param tree
+ * @param id
+ * @returns {*[]}
+ */
+export const setTreeChecked = (check, halfCheck = [], tree = [], id = 'uid') =&gt; {
+    let checkTree = []
+    if (tree) {
+        tree.forEach((item) =&gt; {
+            checkTree.push({
+                ...item,
+                checked: (check.indexOf('' + item[id]) &gt; -1 || halfCheck.indexOf('' + item[id]) &gt; -1),
+                children: getCheckedTree(check, halfCheck, item.children, id)
+            })
+        })
+    }
+    return checkTree
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br></div></div><p>使用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+    &lt;!--  授权 --&gt;
+    &lt;a-modal :visible=&quot;visible&quot; title=&quot;授权对象&quot; @ok=&quot;authOk&quot; @cancel=&quot;cancel&quot;&gt;
+        &lt;a-radio-group v-model=&quot;radio&quot; @change=&quot;onChangeRadio&quot; class=&quot;select-radio&quot;&gt;
+            &lt;a-radio :style=&quot;radioStyle&quot; value=&quot;PRIVATE&quot;&gt;
+                私有
+            &lt;/a-radio&gt;
+            &lt;a-radio :style=&quot;radioStyle&quot; value=&quot;ALL&quot;&gt;
+                全部用户
+            &lt;/a-radio&gt;
+            &lt;a-radio :style=&quot;radioStyle&quot; value=&quot;ORG&quot;&gt;
+                特定组织结构
+            &lt;/a-radio&gt;
+        &lt;/a-radio-group&gt;
+        &lt;div v-if=&quot;radio === 'ORG'&quot; class=&quot;tree-box&quot;&gt;
+            &lt;a-space&gt;
+                &lt;a-input-search
+                    class=&quot;search-input&quot;
+                    v-model=&quot;searchStr&quot;
+                    placeholder=&quot;请输入&quot;
+                    style=&quot;width:200px;&quot;
+                    @change=&quot;onSearch&quot;
+                /&gt;
+                &lt;a-checkbox :checked=&quot;isView&quot; @change=&quot;handleChange&quot;&gt;
+                    查看已选
+                &lt;/a-checkbox&gt;
+            &lt;/a-space&gt;
+            &lt;a-tree
+                ref=&quot;aa&quot;
+                v-if=&quot;!isView&quot;
+                checkable
+                :auto-expand-parent=&quot;autoExpandParent&quot;
+                :defaultExpandAll=&quot;defaultExpandAll&quot;
+                :checkedKeys=&quot;checkedKeys&quot;
+                :treeData=&quot;renderDataTreeNodes(treeData)&quot;
+                :selectedKeys=&quot;selectedKeys&quot;
+                @expand=&quot;onExpand&quot;
+                :filterTreeNode=&quot;filterTreeNode&quot;
+                @check=&quot;onCheck&quot;
+                :expandedKeys=&quot;expandedKeys&quot;
+                :autoExpandParent=&quot;autoExpandParent&quot;
+                :showRightIcon=&quot;true&quot;
+            &gt;
+                &lt;template slot='name' slot-scope=&quot;{name}&quot;&gt;
+                    &lt;span v-html=&quot;htmlVal(name)&quot;&gt;&lt;/span&gt;
+                    &lt;!--                         &lt;span v-html=&quot;name.replace(new RegExp(searchValue, 'g'),'&lt;span style=color:#f50&gt;' + searchValue + '&lt;/span&gt;')&quot;&gt;&lt;/span&gt;--&gt;
+                &lt;/template&gt;
+            &lt;/a-tree&gt;
+            &lt;a-tree
+                v-else
+                :tree-data=&quot;renderDataTreeNodes(viewTree) || []&quot;
+                ::auto-expand-parent=&quot;autoExpandParent&quot;
+                :defaultExpandAll=&quot;defaultExpandAll&quot;
+                :checkedKeys=&quot;this.checkedKeys&quot;
+                :expandedKeys=&quot;this.expandedKeys&quot;
+                :selectedKeys=&quot;this.selectedKeys&quot;
+                :autoExpandParent=&quot;this.autoExpandParent&quot;
+                :filterTreeNode=&quot;this.filterTreeNode&quot;
+                :showRightIcon=&quot;true&quot;
+                @expand=&quot;this.onExpand&quot;
+                @check=&quot;this.onCheck&quot;
+            &gt;
+                &lt;template slot='name' slot-scope=&quot;{name}&quot;&gt;
+                    &lt;span v-html=&quot;htmlVal(name)&quot;&gt;&lt;/span&gt;
+                &lt;/template&gt;
+            &lt;/a-tree&gt;
+        &lt;/div&gt;
+    &lt;/a-modal&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import {
+    getCheckedTree, getFlatList, getHalfCheckAndCheck, getParentNode, setTreeCheck
+} from '@utils/tree';
+import { authSysOrg, findSysOrgTree } from '@/api';
+import { message } from 'hertz-vue';
+import { getAllOrg } from '@/modules/RelationalDatabase/api';
+
+export default {
+    name: 'Auth',
+    props: {
+        visible: {
+            type: Boolean,
+            default: false,
+        },
+        shareType: {
+            type: String,
+        },
+        orgs: {
+            type: Array
+        },
+    },
+    data() {
+        return {
+            isView: false,
+            radio: 'PRIVATE',
+            searchStr: null,
+            radioStyle: {
+                display: 'block',
+                height: '30px',
+                lineHeight: '30px',
+            },
+            autoExpandParent: true,
+            defaultExpandAll: true,
+            checkedKeys: [],
+            expandedKeys: [],
+            selectedKeys: [],
+            treeData: this.orgs,
+        }
+    },
+    watch: {
+        visible() {
+            this.searchStr = ''
+        }
+    },
+    computed: {
+        htmlVal() {
+            return (name) =&gt; {
+                return name.replace(new RegExp(this.searchStr, 'g'), '&lt;span style=color:#f50&gt;' + this.searchStr + '&lt;/span&gt;')
+            }
+        }
+    },
+    methods: {
+        // 获取特定组织结构
+        getAllOrgTree() {
+            getAllOrg().then(res =&gt; {
+                if (res.success) {
+                    this.treeData = res?.data || []
+                }
+            }).catch(err =&gt; {
+                this.$message.error(err.message)
+            })
+        },
+        // 渲染节点
+        renderDataTreeNodes(data) {
+            if (data.length &lt; 1) {
+                return []
+            }
+            // this.getDataTree(data)
+            let tl = data.map((item) =&gt; {
+                if (item.children) {
+                    return {
+                        title: item.name,
+                        key: item.id + '',
+                        dataRef: item,
+                        // scopedSlots: { title: 'treeNode', rightIcon: 'right-icon' },
+                        scopedSlots: { title: 'treeNode', rightIcon: 'right-icon' },
+                        children: this.renderDataTreeNodes(item.children) || [],
+                        childrenNum: this.renderDataTreeNodes(item.children).length
+                    }
+                }
+                // project_privileges：针对项目分配做 提示处理
+                return {
+                    title: item.name,
+                    // scopedSlots: { title: 'treeNode', rightIcon: 'right-icon' },
+                    scopedSlots: { title: 'treeNode', rightIcon: 'right-icon' },
+                    key: item.id + '',
+                    dataRef: item,
+                    childrenNum: 0
+                }
+            })
+            return tl
+        },
+        // 高亮搜索的
+        filterTreeNode(node) {
+            const name = node.dataRef.dataRef.name
+            const searchValue = this.searchStr
+            let flag = searchValue ? name.includes(searchValue) : false
+            return flag
+        },
+        // 展开/收起节点时触发
+        onExpand(expandedKeys) {
+            this.expandedKeys = expandedKeys;
+            this.autoExpandParent = false;
+        },
+        // 点击复选框触发
+        onCheck(checkedKeys, e) {
+            let initTree = this.treeData
+            let { halfCheckedKeys } = e
+            let resultId = [...checkedKeys, ...halfCheckedKeys]
+            // this.checkedKeys = checkedKeys;
+            setTreeCheck(resultId, initTree, 'id')
+            this.checkedKeys = { checked: checkedKeys, halfChecked: e.halfCheckedKeys }
+        },
+        // 点击树节点触发
+        onChangeRadio() {
+            this.searchStr = ''
+            this.checkedKeys = []
+            this.expandedKeys = []
+        },
+        handleChange(e) {
+            this.isView = e.target.checked
+            if (this.isView) {
+                this.changeResultData()
+            }
+        },
+        // 查看已选状态值
+        changeResultData() {
+            let checkedKeys = this.checkedKeys
+            let resultTree = []
+            let initTree = this.treeData
+            let checkObj = getHalfCheckAndCheck(initTree, 'children', 'id')
+            // 数字转成字符串
+            checkedKeys = checkObj.check.map((item) =&gt; {
+                return '' + item
+            })
+            let halfCheck = checkObj.halfCheck.map((item) =&gt; {
+                return '' + item
+            })
+            resultTree = getCheckedTree(checkedKeys, halfCheck, initTree, 'id')
+            // 默认全部展开
+            let expandedKeys = getParentNode(initTree, 'children', 'id')
+            this.checkedKeys = checkedKeys
+            this.viewTree = resultTree
+            this.expandedKeys = expandedKeys
+        },
+        onSearch() {
+            this.searchValue(this.searchStr)
+        },
+        // 确定
+        authOk() {
+            console.log(this.checkedKeys, 'this.expandedKeys')
+            const treeFlatArr = getFlatList(this.treeData)
+            let orgs = []
+            const checked = Array.isArray(this.checkedKeys) ? this.checkedKeys : this.checkedKeys.checked
+            treeFlatArr.forEach(v =&gt; {
+                if (checked.indexOf(String(v.id)) &gt; -1) {
+                    // orgs.push({
+                    //     deptId: v.id,
+                    //     deptName: v.name
+                    // })
+                    orgs.push(v.id)
+                }
+            })
+            // 没有勾选组织的时候不能点确定
+            if (this.radio === 'ORG' &amp;&amp; !orgs.length) {
+                this.$message.error('请选择组织机构')
+                return
+            }
+            console.log(orgs, 'orgs')
+            console.log(this.radio, 'this.radio')
+            this.$emit('authOk', { orgs, shareType: this.radio })
+            // const isPublic = this.radio
+            // authSysOrg({ graphId: this.graphId, orgs, isPublic }).then(res =&gt; {
+            //     if (res.success) {
+            //         message.success('操作成功')
+            //     } else {
+            //         message.error(res.message)
+            //     }
+            // })
+        },
+        // 取消
+        cancel() {
+            this.$emit('cancel')
+        }
+    },
+    mounted() {
+        this.getAllOrgTree()
+        if (this.shareType) {
+            this.radio = this.shareType
+        }
+        if (this.orgs) {
+            this.checkedKeys = { checked: this.orgs }
+            // this.expandedKeys = this.orgs
+        }
+    }
+}
+&lt;/script&gt;
+
+&lt;style scoped lang=&quot;less&quot;&gt;&lt;/style&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/web/problem/2.html" class="prev">
+        踩坑2
+      </a></span> <span class="next"><a href="/blog/web/problem/4.html">
+        踩坑4
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.31c239b1.js" defer></script><script src="/blog/assets/js/2.54c8d609.js" defer></script><script src="/blog/assets/js/1.52d342e4.js" defer></script><script src="/blog/assets/js/28.bd8c8219.js" defer></script>
+  </body>
+</html>

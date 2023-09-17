@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>踩的坑 | Hello WEB</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/blog/favicon.svg">
+    <meta name="description" content="VuePress,Personal Blog,web">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6b82f87.css" as="style"><link rel="preload" href="/blog/assets/js/app.31c239b1.js" as="script"><link rel="preload" href="/blog/assets/js/2.54c8d609.js" as="script"><link rel="preload" href="/blog/assets/js/1.52d342e4.js" as="script"><link rel="preload" href="/blog/assets/js/26.6fc7e1a4.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.41ba9665.js"><link rel="prefetch" href="/blog/assets/js/11.5e815c2c.js"><link rel="prefetch" href="/blog/assets/js/12.b07064d4.js"><link rel="prefetch" href="/blog/assets/js/13.77912401.js"><link rel="prefetch" href="/blog/assets/js/14.d50691c1.js"><link rel="prefetch" href="/blog/assets/js/15.bd3322d4.js"><link rel="prefetch" href="/blog/assets/js/16.83c1d85e.js"><link rel="prefetch" href="/blog/assets/js/17.3abc90a8.js"><link rel="prefetch" href="/blog/assets/js/18.c8a1c4b9.js"><link rel="prefetch" href="/blog/assets/js/19.d512bd2b.js"><link rel="prefetch" href="/blog/assets/js/20.ef96ad9a.js"><link rel="prefetch" href="/blog/assets/js/21.c2841e22.js"><link rel="prefetch" href="/blog/assets/js/22.0410c39c.js"><link rel="prefetch" href="/blog/assets/js/23.b0cf75d9.js"><link rel="prefetch" href="/blog/assets/js/24.9e3b6e37.js"><link rel="prefetch" href="/blog/assets/js/25.6844f0cc.js"><link rel="prefetch" href="/blog/assets/js/27.cbc0f2ad.js"><link rel="prefetch" href="/blog/assets/js/28.bd8c8219.js"><link rel="prefetch" href="/blog/assets/js/29.1bd716dd.js"><link rel="prefetch" href="/blog/assets/js/3.1072175f.js"><link rel="prefetch" href="/blog/assets/js/30.cfbdf04a.js"><link rel="prefetch" href="/blog/assets/js/4.6056c6da.js"><link rel="prefetch" href="/blog/assets/js/5.da26642f.js"><link rel="prefetch" href="/blog/assets/js/6.400e55b5.js"><link rel="prefetch" href="/blog/assets/js/7.b500c015.js"><link rel="prefetch" href="/blog/assets/js/vendors~docsearch.f53cd023.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6b82f87.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Hello WEB</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/web/basic/JS/1.html" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.react.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6 入门教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git 中文手册
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          配置相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.eslint.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ESLint
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Babel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          部署相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://docs.github.com/zh/actions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub Actions文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Docker
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.redis.com.cn/doc/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nginx中文文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jenkins
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          UI组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://ant.design/index-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.antdv.com/components/overview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/aiyun-github" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/web/basic/JS/1.html" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.react.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6 入门教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git 中文手册
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          配置相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.eslint.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ESLint
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Babel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          部署相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://docs.github.com/zh/actions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub Actions文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Docker
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.redis.com.cn/doc/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nginx中文文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jenkins
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          UI组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://ant.design/index-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.antdv.com/components/overview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/aiyun-github" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/basic/JS/1" class="sidebar-heading clickable"><span>基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/arithmetic/数据结构与算法" class="sidebar-heading clickable"><span>算法</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/problem/1" class="sidebar-heading clickable open active"><span>踩坑</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/web/problem/1.html" aria-current="page" class="active sidebar-link">踩坑1</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_0-vs-code下载缓慢解决办法" class="sidebar-link">0. vs code下载缓慢解决办法</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_1-a-select-中的placeholder默认显示不生效" class="sidebar-link">1.&lt;a-select&gt;中的placeholder默认显示不生效</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_2-react项目中路由找不到对应组件报错" class="sidebar-link">2. react项目中路由找不到对应组件报错</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_3-andt-tree" class="sidebar-link">3. andt-tree</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_4-antd-upload-再次打开modal上传文件时清空缓存" class="sidebar-link">4. antd-upload 再次打开modal上传文件时清空缓存</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_5-回显显示-n换行" class="sidebar-link">5.回显显示/n换行</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_6-输入中文逗号自动转为英文逗号" class="sidebar-link">6.输入中文逗号自动转为英文逗号</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_7-词槽不分页、英文名重复校验" class="sidebar-link">7.词槽不分页、英文名重复校验</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_8-带斜杠的json格式化展示" class="sidebar-link">8.带斜杠的json格式化展示</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_9-浏览器报400-终端请求却成功" class="sidebar-link">9.浏览器报400，终端请求却成功</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_10-ants-form-自定义校验" class="sidebar-link">10. ants-form-自定义校验</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_11-中文逗号替换为英文逗号" class="sidebar-link">11.中文逗号替换为英文逗号</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_12-vue-浏览器tab获得焦点时更新-触发" class="sidebar-link">12.Vue-浏览器Tab获得焦点时更新（触发）</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_13-路由中含角色和图标的写法" class="sidebar-link">13.路由中含角色和图标的写法</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_14-antd-upload文件上传" class="sidebar-link">14.antd-upload文件上传</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_15-前端下载模版-文件存前端" class="sidebar-link">15.前端下载模版（文件存前端）</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_16-antd-tabs根据权限控制隐藏显示" class="sidebar-link">16.antd-tabs根据权限控制隐藏显示</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_17-如果前端需要切换状态-而后端不好提供-则自己维护一个" class="sidebar-link">17.如果前端需要切换状态，而后端不好提供，则自己维护一个</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_18-antd-table中row-key如何使用index" class="sidebar-link">18.antd-table中row-key如何使用index</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_19-http协议下web端浏览器-chrome-无法使用录音功能" class="sidebar-link">19.http协议下web端浏览器（Chrome）无法使用录音功能</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/1.html#_20-更改对象中的属姓名-antd-es6" class="sidebar-link">20. 更改对象中的属姓名（antd+ES6）</a></li></ul></li><li><a href="/blog/web/problem/2.html" class="sidebar-link">踩坑2</a></li><li><a href="/blog/web/problem/3.html" class="sidebar-link">踩坑3</a></li><li><a href="/blog/web/problem/4.html" class="sidebar-link">踩坑4</a></li><li><a href="/blog/web/problem/5.html" class="sidebar-link">踩坑5</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="踩的坑"><a href="#踩的坑" class="header-anchor">#</a> 踩的坑</h1> <h2 id="_0-vs-code下载缓慢解决办法"><a href="#_0-vs-code下载缓慢解决办法" class="header-anchor">#</a> 0. vs code下载缓慢解决办法</h2> <p>从<a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>下载的vscode 链接如下，下载非常慢，因为是国外的镜像，可能需要翻墙。</p> <p>原下载链接：</p> <div class="language-http line-numbers-mode"><pre class="language-http"><code><span class="token header"><span class="token header-name keyword">https</span><span class="token punctuation">:</span><span class="token header-value">//az764295.vo.msecnd.net/stable/fd6f3bce6709b121a895d042d343d71f317d74e7/VSCodeUserSetup-x64-1.54.2.exe</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>使用国内镜像：在**/stable**前配置，将域名改成<a href="https://links.jianshu.com/go?to=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttp%3A%2F%2Fvscode.cdn.azure.cn%2F" target="_blank" rel="noopener noreferrer"><strong>vscode.cdn.azure.cn</strong><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，就非常快了</p> <p>更改后的下载链接</p> <div class="language-http line-numbers-mode"><pre class="language-http"><code><span class="token header"><span class="token header-name keyword">https</span><span class="token punctuation">:</span><span class="token header-value">//vscode.cdn.azure.cn/stable/fd6f3bce6709b121a895d042d343d71f317d74e7/VSCodeUserSetup-x64-1.54.2.exe</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_1-a-select-中的placeholder默认显示不生效"><a href="#_1-a-select-中的placeholder默认显示不生效" class="header-anchor">#</a> 1.<code>&lt;a-select&gt;</code>中的<code>placeholder</code>默认显示不生效</h2> <p>代码：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-select</span>
+                            <span class="token attr-name">show-search</span>
+                            <span class="token attr-name">option-filter-prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>children<span class="token punctuation">&quot;</span></span>
+                            <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 340px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span>
+                            <span class="token attr-name">:filter-option</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>filterOption<span class="token punctuation">&quot;</span></span>
+                            <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请选择数据集!<span class="token punctuation">&quot;</span></span>
+                            <span class="token attr-name">v-decorator</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>['datasetId', { rules: [{ required: true, message: '请选择数据集！' }] }]<span class="token punctuation">&quot;</span></span>
+                    <span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-select-option</span>
+                                <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item in datasetList<span class="token punctuation">&quot;</span></span>
+                                <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.datasetId<span class="token punctuation">&quot;</span></span>
+                                <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.datasetId<span class="token punctuation">&quot;</span></span>
+                        <span class="token punctuation">&gt;</span></span>
+                            {{ item.dataset }}
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-select-option</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-select</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 生成FAQ 回显
+        showFaqModal(record) {
+            this.visible = true;
+            this.editId = record.id
+            this.$nextTick(function () {
+                this.form.setFieldsValue({
+                    question: record.question,
+                    answer: record.answer,
+                    sourceId: record.id,
+                    datasetId: undefined, // 必须为undefined，placeholder默认显示才生效
+                })
+                getMountFaq().then(res =&gt; {
+                    if (res.statusCode === 200) {
+                        this.datasetList = res.data.datasetList
+                    }
+                })
+            })
+        },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>解决办法：</p> <p>antd本身的问题，a-select绑定的值初始为”“或为null都不行，必须设为undefined，才显示默认提示</p> <h2 id="_2-react项目中路由找不到对应组件报错"><a href="#_2-react项目中路由找不到对应组件报错" class="header-anchor">#</a> 2. react项目中路由找不到对应组件报错</h2> <p>报错原文：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>./src/pages/SystemMsg/index.jsx
+Module not found: Can<span class="token string">'t resolve '</span>@compontents/SideMenu/index<span class="token string">' in '</span>/Users/wangaiyun/Desktop/work/metis-knowledge-web/src/pages/SystemMsg'
+Compiling<span class="token punctuation">..</span>.
+Failed to compile.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>报错解释：根据路由找不到相应组件
+原代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import SideMenu from '@components/SideMenu/index'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>解决方法：在<code>@</code>后加个斜杠<code>/</code>
+修改后代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import SideMenu from '@/components/SideMenu/index'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_3-andt-tree"><a href="#_3-andt-tree" class="header-anchor">#</a> 3. andt-tree</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+    &lt;div&gt;
+        &lt;a-modal
+                :title=&quot;title&quot;
+                :visible=&quot;visible&quot;
+                :confirm-loading=&quot;confirmLoading&quot;
+                @ok=&quot;handleSubmit&quot;
+                @cancel=&quot;handleCancel&quot;
+        &gt;
+            &lt;b&gt;{{ tip }}&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;
+            &lt;a-radio-group v-model=&quot;value&quot; @change=&quot;onChangeRadio&quot;&gt;
+                &lt;a-radio :style=&quot;radioStyle&quot; :value=&quot;1&quot;&gt;
+                    全部用户
+                &lt;/a-radio&gt;
+                &lt;a-radio :style=&quot;radioStyle&quot; :value=&quot;2&quot;&gt;
+                    特定组织结构
+                &lt;/a-radio&gt;
+            &lt;/a-radio-group&gt;
+            &lt;div v-if=&quot;value === 2&quot; class=&quot;tree-box&quot;&gt;
+                &lt;a-input-search v-model=&quot;searchStr&quot; placeholder=&quot;输入搜选项&quot; style=&quot;width:200px;&quot; @change=&quot;onSearch&quot;&gt;&lt;/a-input-search&gt;
+                &lt;a-tree
+                        v-model=&quot;checkedKeys&quot;
+                        checkable
+                        :auto-expand-parent=&quot;autoExpandParent&quot;
+                        :defaultExpandAll=&quot;defaultExpandAll&quot;
+                        :expanded-keys=&quot;expandedKeys&quot;
+                        :tree-data=&quot;treeData&quot;
+                        :selected-keys=&quot;selectedKeys&quot;
+                        :replaceFields=&quot;replaceFields&quot;
+                        @expand=&quot;onExpand&quot;
+                        @select=&quot;onSelect&quot;
+                &gt;
+                    &lt;template slot='title' slot-scope=&quot;{name}&quot;&gt;
+                        &lt;span v-html=&quot;name.replace(new RegExp(searchValue, 'g'),'&lt;span style=color:#f50&gt;' + searchValue + '&lt;/span&gt;')&quot;&gt;&lt;/span&gt;
+                    &lt;/template&gt;
+                &lt;/a-tree&gt;
+            &lt;/div&gt;
+        &lt;/a-modal&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import { getAllOrg } from '@/api/skill';
+
+export default {
+    name: 'SkillShared',
+    props: {
+        visible: {
+            type: Boolean,
+            default: false,
+        },
+        confirmLoading: {
+            type: Boolean,
+            default: false,
+        },
+        title: {
+            type: String,
+            default: '共享能力'
+        },
+        tip: {
+            type: String,
+            default: '请选择需要共享此能力的范围：'
+        },
+    },
+    data() {
+        return {
+            value: 1,
+            radioStyle: {
+                display: 'block',
+                height: '30px',
+                lineHeight: '30px',
+            },
+            backupsExpandedKeys: [],
+            autoExpandParent: true,
+            defaultExpandAll: true,
+            expandedKeys: [],
+            selectedKeys: [],
+            searchStr: '',
+            searchValue: '',
+            checkedKeys: [],
+            treeData: [],
+            replaceFields: {
+                title: 'name',
+                key: 'id'
+            },
+        };
+    },
+    watch: {
+        checkedKeys(val) {
+            // this.expandedKeys = val
+        },
+        visible() {
+            this.value = 1
+            this.checkedKeys = []
+        }
+    },
+    methods: {
+        async getAllOrgTree() {
+            let res = await getAllOrg()
+            this.treeData = res?.data || []
+        },
+        // 确定-功能能力
+        handleSubmit() {
+            this.$emit('complete', this.checkedKeys)
+        },
+        // 取消-关闭弹框
+        handleCancel() {
+            this.$emit('cancle')
+        },
+        // 切换单选框触发
+        onChangeRadio(e) {
+            this.checkedKeys = []
+            this.expandedKeys = [];
+        },
+        // 展开/收起节点时触发
+        onExpand(expandedKeys) {
+            this.expandedKeys = expandedKeys;
+            this.autoExpandParent = false;
+        },
+        // 点击复选框触发
+        onCheck(checkedKeys) {
+            this.checkedKeys = checkedKeys;
+        },
+        // 点击树节点触发
+        onSelect(selectedKeys, info) {
+            this.selectedKeys = selectedKeys;
+        },
+        // 点击搜索进行模糊筛选
+        onSearch() {
+            const _this = this;
+            // 只点击搜索才触发
+            _this.searchValue = _this.searchStr;
+            // 如果搜索值为空，则不展开任何项，expandedKeys置为空
+            // 如果搜索值不位空，则expandedKeys的值要为搜索值的父亲及其所有祖先
+            if (_this.searchValue === '') {
+                _this.expandedKeys = [];
+            } else {
+                // 首先将展开项与展开项副本置为空
+                _this.expandedKeys = [];
+                _this.backupsExpandedKeys = [];
+                // 获取所有存在searchValue的节点
+                let candidateKeysList = _this.getkeyList(_this.searchValue, _this.treeData, []);
+                // 遍历满足条件的所有节点
+                candidateKeysList.map(
+                    item =&gt; {
+                        let key = _this.getParentKey(item, this.treeData);
+                        console.log(key, ',,,,,,,')
+                        if (key &amp;&amp; !_this.backupsExpandedKeys.some(item =&gt; item === key)) {
+                            _this.backupsExpandedKeys.push(key);
+                        }
+                    }
+                )
+                let length = this.backupsExpandedKeys.length;
+                for (let i = 0; i &lt; length; i++) {
+                    _this.getAllParentKey(_this.backupsExpandedKeys[i], _this.treeData)
+                }
+                _this.expandedKeys = _this.backupsExpandedKeys.slice();
+                _this.autoExpandParent = true
+            }
+        },
+        // 获取节点中含有value的所有key集合
+        getkeyList(value, tree, keyList) {
+            for (let i = 0; i &lt; tree.length; i++) {
+                let node = tree[i];
+                node.scopedSlots = { title: 'title' }
+                if (node.name.indexOf(value) &gt; -1) {
+                    keyList.push(node.id);
+                }
+                if (node.children) {
+                    this.getkeyList(value, node.children, keyList);
+                }
+            }
+            return keyList;
+        },
+
+        // 该递归主要用于获取key的父亲节点的key值
+        getParentKey(key, tree) {
+            let parentKey;
+            for (let i = 0; i &lt; tree.length; i++) {
+                const node = tree[i];
+                if (node.children) {
+                    if (node.children.some(item =&gt; item.id === key)) {
+                        parentKey = node.id;
+                    } else if (this.getParentKey(key, node.children)) {
+                        parentKey = this.getParentKey(key, node.children);
+                    }
+                }
+            }
+            return parentKey;
+        },
+        // 获取该节点的所有祖先节点
+        getAllParentKey(key, tree) {
+            let parentKey
+            if (key) {
+                // 获得父亲节点
+                parentKey = this.getParentKey(key, tree);
+                if (parentKey) {
+                    // 如果父亲节点存在，判断是否已经存在于展开列表里，不存在就进行push
+                    if (!this.backupsExpandedKeys.some(item =&gt; item === parentKey)) {
+                        this.backupsExpandedKeys.push(parentKey)
+                    }
+                    // 继续向上查找祖先节点
+                    this.getAllParentKey(parentKey, tree)
+                }
+            }
+        },
+    },
+    created() {
+        this.getAllOrgTree()
+    },
+};
+&lt;/script&gt;
+&lt;style&gt;
+.tree-box{
+    height: 50%;
+}
+&lt;/style&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br></div></div><h2 id="_4-antd-upload-再次打开modal上传文件时清空缓存"><a href="#_4-antd-upload-再次打开modal上传文件时清空缓存" class="header-anchor">#</a> 4. antd-upload 再次打开modal上传文件时清空缓存</h2> <p>需求：再次上传清空列表缓存</p> <ol><li>使用 <code>v-if</code> <strong>原理：</strong> <code>v-if</code>切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件。</li> <li>使用 <code>Math.random()</code> <strong>原理：</strong> <code>Math.random()</code>获得的值是一个随机数，这样在每次打开弹窗的时候，<code>Upload</code> 组件得到的 <code>key</code> 值就是唯一值。</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;a-modal
+                    v-model=&quot;uploadVisible&quot;
+                    title=&quot;导入&quot;
+                    :confirm-loading=&quot;uploadConfirmLoading&quot;
+                    @ok=&quot;handleUploadFile&quot;
+                    @cancel=&quot;handleUploadCancel&quot;
+                    &gt;
+                    &lt;div :key=&quot;Math.random()&quot;&gt; // 随机数，使每次Upload组件得到的key值是唯一值
+                        &lt;a-upload-dragger
+                                v-if=&quot;uploadVisible&quot; // data里面先给到uploadVisible为false
+                                accept=&quot;.xlsx, .xls&quot;
+                                :multiple=&quot;true&quot;
+                                :showUploadList=&quot;true&quot;
+                                :headers=&quot;headers&quot;
+                                :beforeUpload=&quot;beforeUpload&quot;
+                                :data=&quot;{datasetId: dataSetId}&quot;
+                                @change=&quot;handleFileChange&quot;
+                        &gt;
+                            &lt;p class=&quot;ant-upload-drag-icon&quot;&gt;
+                                &lt;hz-icon type=&quot;icon-shangchuan1&quot; /&gt;
+                            &lt;/p&gt;
+                            &lt;p class=&quot;ant-upload-text&quot;&gt;
+                                将文件拖拽至此或 &lt;a&gt;点击导入&lt;/a&gt;
+                            &lt;/p&gt;
+                            &lt;p class=&quot;ant-upload-hint&quot;&gt;
+                                支持单个/多个文件上传，文件格式支持Excel，文件大小不操作100M
+                            &lt;/p&gt;
+                        &lt;/a-upload-dragger&gt;
+										&lt;/div&gt;
+                &lt;/a-modal&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="_5-回显显示-n换行"><a href="#_5-回显显示-n换行" class="header-anchor">#</a> 5.回显显示/n换行</h2> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 使用pre标签：--&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
+/* 使用pre-line属性 */
+white-space: pre-line;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_6-输入中文逗号自动转为英文逗号"><a href="#_6-输入中文逗号自动转为英文逗号" class="header-anchor">#</a> 6.输入中文逗号自动转为英文逗号</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;input
+                    onafterpaste=&quot;this.value = this.value.replace(/，/g,',')&quot;
+                    onkeyup=&quot;this.value = this.value.replace(/，/g,',')&quot;
+            /&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>onafterpaste：粘贴触发</p> <p>onkeyup：键盘触发</p> <h2 id="_7-词槽不分页、英文名重复校验"><a href="#_7-词槽不分页、英文名重复校验" class="header-anchor">#</a> 7.词槽不分页、英文名重复校验</h2> <h2 id="_8-带斜杠的json格式化展示"><a href="#_8-带斜杠的json格式化展示" class="header-anchor">#</a> 8.带斜杠的json格式化展示</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+&lt;pre&gt;{{JSON.stringify(JSON.parse(response), null, 2)}}&lt;/pre&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="_9-浏览器报400-终端请求却成功"><a href="#_9-浏览器报400-终端请求却成功" class="header-anchor">#</a> 9.浏览器报400，终端请求却成功</h2> <p>1.浏览器调用接口，打开控制台-<code>Network</code>-在接口名上点击鼠标右键-点击Copy- 点击Copy as cURL</p> <p>2.将复制的cURL中的请求地址 <code>http://localhost:8080/qa/knowledgeFeedback/search</code> 改为服务器地址 <code>http://192.../qa/knowledgeFeedback/search</code></p> <p>3.修改后打开Mac终端，复制修改后的cURL回车运行，发现请求成功</p> <p>原因：后面检查发现是后端给的接口前缀和前端定的代理前缀冲突，后端接口前缀/a/b/...，前端之前分别定过/a和/b的
+解决：后端修改前缀</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl 'http://192...' \
+  -H 'Accept: application/json,text/plain,*/*' \
+  -H 'Accept-Language: zh-CN,zh;q=0.9' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Cookie: Webstorm-d356b471=c7f219c7-68fb-4bbb-904d-884d8df66752; JSESSIONID=fb3c25dd-4ad6-4075-b892-f7a0a5fbcc87' \
+  -H 'Origin: http://localhost:8080' \
+  -H 'Referer: http://localhost:8080/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36' \
+  -H 'X-metis-platform: KQA' \
+  -H 'X-metis-token: fb3c25dd-4ad6-4075-b892-f7a0a5fbcc87' \
+  -H 'sec-ch-ua: &quot; Not A;Brand&quot;;v=&quot;99&quot;, &quot;Chromium&quot;;v=&quot;101&quot;, &quot;Google Chrome&quot;;v=&quot;101&quot;' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: &quot;macOS&quot;' \
+  --data-raw '{&quot;pageNum&quot;:1,&quot;pageSize&quot;:10}' \
+  --compressed
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="_10-ants-form-自定义校验"><a href="#_10-ants-form-自定义校验" class="header-anchor">#</a> 10. ants-form-自定义校验</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>rules: {
+                word: [
+                    { required: true, message: '请输入领域词！' },
+                ],
+                synonyms: [
+                    { validator: this.checkSymbol },
+                    { validator: this.lengthLimit }
+                ],
+            },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// 符号只能输入英文的逗号校验(只能输入中文、英文、数字、英文逗号,)
+        checkSymbol(rule, value, callback) {
+            let rgx = /[^\a-\z\A-\Z0-9\u4E00-\u9FA5\,]/g
+            if (!rgx.test(value)) {
+                callback()
+            } else {
+                callback(new Error('同义词字段不可包含英文逗号以外的标点符号，请检查'))
+            }
+        },
+        // 同义词长度校验
+        lengthLimit(rule, value, callback) {
+            if (value.split(',').length - 1 &lt; 10) {
+                callback()
+            } else {
+                callback(new Error('同义词最多只能有10个'))
+            }
+        },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="_11-中文逗号替换为英文逗号"><a href="#_11-中文逗号替换为英文逗号" class="header-anchor">#</a> 11.中文逗号替换为英文逗号</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;input onkeyup=&quot;this.value = this.value.replace(/，/g,',')&quot; /&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_12-vue-浏览器tab获得焦点时更新-触发"><a href="#_12-vue-浏览器tab获得焦点时更新-触发" class="header-anchor">#</a> 12.Vue-浏览器Tab获得焦点时更新（触发）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 在vue中要放在updated生命周期钩子里
+updated() {
+        const _this = this
+        window.onfocus = function() {
+            _this.handleGetSkillList()
+            _this.handleGetSkillTypes()
+        };
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_13-路由中含角色和图标的写法"><a href="#_13-路由中含角色和图标的写法" class="header-anchor">#</a> 13.路由中含角色和图标的写法</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  path: 'knowledgeManagement',
+name: 'knowledgeManagement',
+redirect: '/manage/knowledgeManagement/faq', // 路由转发
+component: KnowledgeManagement,
+meta: {
+    title: '知识管理',  // 可作为浏览器Tab标题
+    dropdown: true, // 菜单下拉
+    roles: ['knowledge_manager'], // 角色权限控制
+    icon: 'icon-knowledge', // icon图标
+},
+children: [
+    {
+        path: 'faq',
+        name: 'KnowledgeFaq',
+        component: KnowledgeFaq,
+        meta: {
+            title: 'FAQ管理', 
+            roles: ['faq_manager'],
+            icon: 'icon-faq',
+        },
+    },
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="_14-antd-upload文件上传"><a href="#_14-antd-upload文件上传" class="header-anchor">#</a> 14.antd-upload文件上传</h2> <p>需求：单文件上传，类型限制Excel，大小限制20M，后端上传失败要显示后端的提示信息，并且前端不显示上传失败的文件</p> <p>template中组件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;a-upload-dragger
+                  name=&quot;file&quot;设置file
+                  accept=&quot;.xlsx, .xls&quot;文件类型
+                  :action=&quot;'/xx/xx'&quot;接口路径
+                  :multiple=&quot;false&quot;选择文件是否能多选
+                  :showUploadList=&quot;true&quot;显示上传列表
+                  :headers=&quot;headers&quot;设置headers
+                  :file-list=&quot;fileList&quot;上传列表
+                  :beforeUpload=&quot;beforeUpload&quot;上传之前的钩子，校验
+                  @change=&quot;handleUploadChange&quot;上传成功的回掉
+                  :data=&quot;{id}&quot;其他需要的参数
+                  &gt;
+  &lt;p class=&quot;ant-upload-drag-icon&quot;&gt;
+    &lt;hz-icon type=&quot;icon-shangchuan1&quot;/&gt;
+  &lt;/p&gt;
+  &lt;p class=&quot;ant-upload-text&quot;&gt;
+    将文件拖拽至此或 &lt;a&gt;点击导入&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p class=&quot;ant-upload-hint&quot;&gt;
+    文件大小限制20M的单个文件
+  &lt;/p&gt;
+  &lt;p class=&quot;ant-upload-hint&quot;&gt;
+    文件格式支持Excel
+  &lt;/p&gt;
+&lt;/a-upload-dragger&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>data()中属性：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>data() {
+  return {
+    id: '1',
+    fileList: [],
+    headers: {
+      'authorization': 'authorization-text',
+      'X-xx-token': getToken(),
+    },
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>methods中方法：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  // 导入前-校验
+  beforeUpload(file) {
+    if (file.size / 1024 / 1024 &gt; 20) {
+      this.$message.warning('上传失败：上传文件限制20M')
+      return false
+    }
+    return true
+  },
+  // 导入-回调
+  handleUploadChange(info) {
+    let fileList = [...info.fileList];
+    // 限制文件上传数量为1
+    fileList = fileList.slice(-1);
+    const status = info.file.status;
+    if (status === 'done') {
+      if (info.file.response.statusCode === 200) {
+        this.$message.success(`${info.file.name} 导入成功`);
+        this.handleGetTableList() // 成功后调用查询列表方法来回显
+      } else {
+        // info.file.response.message获取到的是后端给的错误提示
+        this.$message.error(`${info.file.name} 导入失败：` + info.file.response.message);
+        fileList = [] // 导入报错不显示错误文件
+      }
+    } else if (status === 'error') {
+      this.$message.error(`${info.file.name} 导入失败：` + info.file.response.message);
+      fileList = []
+    }
+    this.fileList = fileList;
+  },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h2 id="_15-前端下载模版-文件存前端"><a href="#_15-前端下载模版-文件存前端" class="header-anchor">#</a> 15.前端下载模版（文件存前端）</h2> <p>单独的js方法，方便多组件调用：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 下载放前端静态资源(/public/static/xxx.xx)里面的模板
+export function templateDownload({ url , fileName }) {
+    let a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>组件中使用：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 下载模板
+handDownload() {
+  templateDownload({
+    url: '/static/xx.xlsx',
+    fileName: 'xx.xlsx',
+  })
+},
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="_16-antd-tabs根据权限控制隐藏显示"><a href="#_16-antd-tabs根据权限控制隐藏显示" class="header-anchor">#</a> 16.antd-tabs根据权限控制隐藏显示</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;a-tabs default-active-key=&quot;1&quot; :hasLine=&quot;false&quot; :animated=&quot;false&quot; v-model=&quot;activeKey&quot;&gt;
+  &lt;a-tab-pane v-for=&quot;(item, index) in tabs&quot; :key=&quot;(index+1).toString()&quot; :tab=&quot;item.tab&quot;&gt;
+    &lt;!--嵌套展示的其他组件--&gt;
+    &lt;component-a v-if=&quot;item.tab === 'name1'&quot;&gt;&lt;/component-a&gt;
+    &lt;component-b v-if=&quot;item.tab === 'name2'&quot;&gt;&lt;/component-b&gt;
+    &lt;component-c v-if=&quot;item.tab === 'name3'&quot;&gt;&lt;/component-c&gt;
+	&lt;/a-tab-pane&gt;
+&lt;/a-tabs&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>data() {
+  return {
+    activeKey: '1',
+    tabs: [],
+  }
+},
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>created() {
+  // 判断是否为管理员或有权限的其他用户，控制tabs项展示
+  if (this.isAdmin || this.roles.includes('roles1')) {
+    this.tabs.push({
+      key: '1',
+      tab: 'name1',
+    })
+  }
+  if (this.isAdmin || this.roles.includes('roles2')) {
+    this.tabs.push({
+      key: '2',
+      tab: 'name2',
+    })
+  }
+  if (this.isAdmin || this.roles.includes('roles3')) {
+    this.tabs.push({
+      key: '3',
+      tab: 'name3',
+    })
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="_17-如果前端需要切换状态-而后端不好提供-则自己维护一个"><a href="#_17-如果前端需要切换状态-而后端不好提供-则自己维护一个" class="header-anchor">#</a> 17.如果前端需要切换状态，而后端不好提供，则自己维护一个</h2> <p>需求：很多item项以卡片形式展示，每个卡片hover显示“采纳”按钮，点击“采纳”按钮，成功后，按钮状态变为“已采纳”</p> <p>ps：后端不保存也不返回此状态</p> <p>解决方案：前端自己维护一个状态，调用采纳接口，成功的时候给这个数据加一个状态</p> <h2 id="_18-antd-table中row-key如何使用index"><a href="#_18-antd-table中row-key如何使用index" class="header-anchor">#</a> 18.antd-table中row-key如何使用index</h2> <p>需求：当接口返回的数据没有唯一标识（id）时，使用index</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;a-table
+         :columns=&quot;columns&quot;
+         :data-source=&quot;data&quot;
+         :row-key=&quot;(r,i)=&gt;i.toString()&quot;
+         :pagination=&quot;false&quot;&gt;
+&lt;/a-table&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_19-http协议下web端浏览器-chrome-无法使用录音功能"><a href="#_19-http协议下web端浏览器-chrome-无法使用录音功能" class="header-anchor">#</a> 19.http协议下web端浏览器（Chrome）无法使用录音功能</h2> <p>需求：在web端网页实现语音功能</p> <p>问题：chrome下获取浏览器录音功能，因为安全性问题，需要在localhost或127.0.0.1或https下才能获取权限</p> <p>解决：</p> <ul><li>浏览器输入 chrome://flags/#unsafely-treat-insecure-origin-as-secure</li> <li>输入需要获取的链接 选中Enabled</li> <li>然后点击右下角弹出的Relaunch按钮 重启</li></ul> <h2 id="_20-更改对象中的属姓名-antd-es6"><a href="#_20-更改对象中的属姓名-antd-es6" class="header-anchor">#</a> 20. 更改对象中的属姓名（antd+ES6）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// `this.form.getFieldsValue()` 是antd中获取form的所有值，结果为Object（对象）
+// 方法一
+const dataObj = JSON.parse(JSON.stringify(this.form.getFieldsValue()).replace(/name/g, 'userName'))
+// 方法二
+const { name: userName } = this.form.getFieldsValue()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/web/arithmetic/《图解算法数据结构》笔记.html" class="prev">
+        图解算法数据结构-笔记
+      </a></span> <span class="next"><a href="/blog/web/problem/2.html">
+        踩坑2
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.31c239b1.js" defer></script><script src="/blog/assets/js/2.54c8d609.js" defer></script><script src="/blog/assets/js/1.52d342e4.js" defer></script><script src="/blog/assets/js/26.6fc7e1a4.js" defer></script>
+  </body>
+</html>

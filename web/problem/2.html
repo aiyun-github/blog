@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. antd中的RangePicker日期选择框设置快捷日期预选按钮（ranges预设时间范围快捷选择） | Hello WEB</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/blog/favicon.svg">
+    <meta name="description" content="VuePress,Personal Blog,web">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6b82f87.css" as="style"><link rel="preload" href="/blog/assets/js/app.31c239b1.js" as="script"><link rel="preload" href="/blog/assets/js/2.54c8d609.js" as="script"><link rel="preload" href="/blog/assets/js/1.52d342e4.js" as="script"><link rel="preload" href="/blog/assets/js/27.cbc0f2ad.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.41ba9665.js"><link rel="prefetch" href="/blog/assets/js/11.5e815c2c.js"><link rel="prefetch" href="/blog/assets/js/12.b07064d4.js"><link rel="prefetch" href="/blog/assets/js/13.77912401.js"><link rel="prefetch" href="/blog/assets/js/14.d50691c1.js"><link rel="prefetch" href="/blog/assets/js/15.bd3322d4.js"><link rel="prefetch" href="/blog/assets/js/16.83c1d85e.js"><link rel="prefetch" href="/blog/assets/js/17.3abc90a8.js"><link rel="prefetch" href="/blog/assets/js/18.c8a1c4b9.js"><link rel="prefetch" href="/blog/assets/js/19.d512bd2b.js"><link rel="prefetch" href="/blog/assets/js/20.ef96ad9a.js"><link rel="prefetch" href="/blog/assets/js/21.c2841e22.js"><link rel="prefetch" href="/blog/assets/js/22.0410c39c.js"><link rel="prefetch" href="/blog/assets/js/23.b0cf75d9.js"><link rel="prefetch" href="/blog/assets/js/24.9e3b6e37.js"><link rel="prefetch" href="/blog/assets/js/25.6844f0cc.js"><link rel="prefetch" href="/blog/assets/js/26.6fc7e1a4.js"><link rel="prefetch" href="/blog/assets/js/28.bd8c8219.js"><link rel="prefetch" href="/blog/assets/js/29.1bd716dd.js"><link rel="prefetch" href="/blog/assets/js/3.1072175f.js"><link rel="prefetch" href="/blog/assets/js/30.cfbdf04a.js"><link rel="prefetch" href="/blog/assets/js/4.6056c6da.js"><link rel="prefetch" href="/blog/assets/js/5.da26642f.js"><link rel="prefetch" href="/blog/assets/js/6.400e55b5.js"><link rel="prefetch" href="/blog/assets/js/7.b500c015.js"><link rel="prefetch" href="/blog/assets/js/vendors~docsearch.f53cd023.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6b82f87.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Hello WEB</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/web/basic/JS/1.html" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.react.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6 入门教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git 中文手册
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          配置相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.eslint.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ESLint
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Babel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          部署相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://docs.github.com/zh/actions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub Actions文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Docker
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.redis.com.cn/doc/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nginx中文文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jenkins
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          UI组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://ant.design/index-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.antdv.com/components/overview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/aiyun-github" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/web/basic/JS/1.html" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.react.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          文档教程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ES6 入门教程
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git 中文手册
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          配置相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh-hans.eslint.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ESLint
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Babel
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          部署相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://docs.github.com/zh/actions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub Actions文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Docker
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.redis.com.cn/doc/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Nginx中文文档
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jenkins.io/zh/doc/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Jenkins
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          UI组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://ant.design/index-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design React
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.antdv.com/components/overview" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Ant Design Vue
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/aiyun-github" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/basic/JS/1" class="sidebar-heading clickable"><span>基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/arithmetic/数据结构与算法" class="sidebar-heading clickable"><span>算法</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/web/problem/1" class="sidebar-heading clickable open"><span>踩坑</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/web/problem/1.html" class="sidebar-link">踩坑1</a></li><li><a href="/blog/web/problem/2.html" aria-current="page" class="active sidebar-link">踩坑2</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_1-antd中的rangepicker日期选择框设置快捷日期预选按钮-ranges预设时间范围快捷选择" class="sidebar-link">1. antd中的RangePicker日期选择框设置快捷日期预选按钮（ranges预设时间范围快捷选择）</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_2-禁用日期-只可选当天前30天-包含当天" class="sidebar-link">2. 禁用日期（只可选当天前30天，包含当天）</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_3-antd-upload上传文件-在上传之前根据文件大小判断是否显示loading" class="sidebar-link">3. antd-upload上传文件(在上传之前根据文件大小判断是否显示loading)</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_4-antd-upload上传前自定义校验-未通过则提示且不显示上传文件" class="sidebar-link">4. antd-upload上传前自定义校验，未通过则提示且不显示上传文件</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_5-antd-table删除最后一页全部数据-回到上一页" class="sidebar-link">5. antd-table删除最后一页全部数据，回到上一页</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_6-antd-table过长显示滚动条-并且固定操作列" class="sidebar-link">6. antd-table过长显示滚动条，并且固定操作列</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_7-antd全局修改字体或主题颜色" class="sidebar-link">7. antd全局修改字体或主题颜色</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_8-css溢出的文字显示省略号的颜色与文字颜色一样" class="sidebar-link">8. css溢出的文字显示省略号的颜色与文字颜色一样</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_9-eslint配置项的报错-failed-to-load-config-standard-to-extend-from" class="sidebar-link">9.  eslint配置项的报错:Failed to load config “standard“ to extend from.</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_10-antd-upload禁止上传-csv文件" class="sidebar-link">10. antd-upload禁止上传.csv文件</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_11-退回到登录页刷新页面" class="sidebar-link">11. 退回到登录页刷新页面</a></li><li class="sidebar-sub-header"><a href="/blog/web/problem/2.html#_12-a-input同时绑定keydown-enter和blur事件-解决点击enter会调用两次-keydown、blur" class="sidebar-link">12. a-input同时绑定keydown.enter和blur事件，解决点击enter会调用两次（keydown、blur）</a></li></ul></li><li><a href="/blog/web/problem/3.html" class="sidebar-link">踩坑3</a></li><li><a href="/blog/web/problem/4.html" class="sidebar-link">踩坑4</a></li><li><a href="/blog/web/problem/5.html" class="sidebar-link">踩坑5</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-antd中的rangepicker日期选择框设置快捷日期预选按钮-ranges预设时间范围快捷选择"><a href="#_1-antd中的rangepicker日期选择框设置快捷日期预选按钮-ranges预设时间范围快捷选择" class="header-anchor">#</a> 1. antd中的<a href="https://www.antdv.com/components/date-picker-cn/#API" target="_blank" rel="noopener noreferrer">RangePicker<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>日期选择框设置快捷日期预选按钮（ranges预设时间范围快捷选择）</h2> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-range-picker</span>
+    <span class="token attr-name">:ranges</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{ '今天': [moment(), moment()], '昨天': [moment().subtract(1, 'day'), moment().subtract(1, 'day')], '近七天': [moment().subtract(6, 'day'), moment()] }<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>['请选择日期', '']<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">separator</span>
+    <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 220px</span><span class="token punctuation">&quot;</span></span></span>
+    <span class="token attr-name">@change</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>handleDateChange<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hz-icon</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>suffixIcon<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>icon-calendar<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-range-picker</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><a href="http://momentjs.cn/" target="_blank" rel="noopener noreferrer">Moment.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> —— JavaScript 日期处理类库</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import moment from 'moment';
+
+// 处理日期
+methods: {
+    handleDateChange(values) {
+        if (values &amp;&amp; values.length &gt; 0) {
+            this.startTime = moment(values[0]).format('YYYY-MM-DD 00:00:00')
+            this.endTime = moment(values[1]).format('YYYY-MM-DD 23:59:59')
+        } else {
+            this.startTime = ''
+            this.endTime = ''
+        }
+    },
+},
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_2-禁用日期-只可选当天前30天-包含当天"><a href="#_2-禁用日期-只可选当天前30天-包含当天" class="header-anchor">#</a> 2. 禁用日期（只可选当天前30天，包含当天）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 禁用日期（只可选当天前30天，包含当天）
+disabledDate(current) {
+    return current &lt; moment().subtract(29, 'days') || current &gt; moment().add('days')
+},
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_3-antd-upload上传文件-在上传之前根据文件大小判断是否显示loading"><a href="#_3-antd-upload上传文件-在上传之前根据文件大小判断是否显示loading" class="header-anchor">#</a> 3. antd-upload上传文件(在上传之前根据文件大小判断是否显示loading)</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 文件导入之前的钩子（导入1M以下文件不显示loading）
+beforeUploadFile (file) {
+  const isFile1M = file.size / 1024 / 1024 &lt; 1;
+  if (!isFile1M) {
+    this.uploadSpinning = false
+  } else {
+    this.uploadSpinning = true
+  }
+  return isFile1M
+},
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="_4-antd-upload上传前自定义校验-未通过则提示且不显示上传文件"><a href="#_4-antd-upload上传前自定义校验-未通过则提示且不显示上传文件" class="header-anchor">#</a> 4. antd-upload上传前自定义校验，未通过则提示且不显示上传文件</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>beforeUpload(file) {
+  const size = file.size / 1024 / 1024 &gt; 1
+  return new Promise((resolve, reject) =&gt; {
+    if (size) {
+      this.$message.warning('上传文件过大');
+      reject(file);
+    } else {
+      resolve(file);
+    }
+  });
+},
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="_5-antd-table删除最后一页全部数据-回到上一页"><a href="#_5-antd-table删除最后一页全部数据-回到上一页" class="header-anchor">#</a> 5. antd-table删除最后一页全部数据，回到上一页</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * 当删除最后一页的最后一条数据后，自动获取上一页
+ * @param total 总数
+ * @param pageNum 当前页码
+ * @param pageSize 每页条数
+ * @param delNum 要删除的条数
+ * @returns {number}
+ */
+export function calcPageNum (total, pageNum = 1, pageSize = 10, delNum = 1) {
+    const restNum = total - pageSize * (pageNum - 1) // 当前页条数
+    let pageNumDiff = Math.floor((delNum - restNum) / pageSize) + 1
+    pageNumDiff &lt; 0 &amp;&amp; (pageNumDiff = 0)
+    pageNum = pageNum - pageNumDiff
+    pageNum &lt; 1 &amp;&amp; (pageNum = 1)
+    return pageNum
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code> this.pageNum = calcPageNum(this.total, this.pageNum, this.pageSize, this.selectedRowKeys.length)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_6-antd-table过长显示滚动条-并且固定操作列"><a href="#_6-antd-table过长显示滚动条-并且固定操作列" class="header-anchor">#</a> 6. antd-table过长显示滚动条，并且固定操作列</h2> <p>1、按照antd官网的写法，如果不行，就给表格绝对定位就可以显示滚动条了
+2、自适应根据屏幕大小是否显示滚动条(重点：<code>:scroll=&quot;{ x: 'max-content' }&quot;</code>)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;a-table
+    :row-selection=&quot;{ selectedRowKeys: selectedRowKeys, onChange: onSelectChange }&quot;
+    :style=&quot;{ whiteSpace: 'nowrap'}&quot;
+    :scroll=&quot;{ x: 'max-content' }&quot;
+    :columns=&quot;columns.filter((col,num)=&gt;{if(col.show || col.show === undefined){return col}})&quot;
+    :data-source=&quot;data&quot;
+    row-key=&quot;id&quot;
+&gt;&lt;/a-table&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_7-antd全局修改字体或主题颜色"><a href="#_7-antd全局修改字体或主题颜色" class="header-anchor">#</a> 7. antd全局修改字体或主题颜色</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+	css: {
+		loaderOptions: {
+			less: {
+				lessOptions: {
+					modifyVars: {
+						'font-size-base': '14px',
+						'primary-color': '#1F71FF'
+					},
+					javascriptEnabled: true
+				}
+			}
+		}
+	},
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="_8-css溢出的文字显示省略号的颜色与文字颜色一样"><a href="#_8-css溢出的文字显示省略号的颜色与文字颜色一样" class="header-anchor">#</a> 8. css溢出的文字显示省略号的颜色与文字颜色一样</h2> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">div</span><span class="token punctuation">{</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+	<span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">;</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="_9-eslint配置项的报错-failed-to-load-config-standard-to-extend-from"><a href="#_9-eslint配置项的报错-failed-to-load-config-standard-to-extend-from" class="header-anchor">#</a> 9.  eslint配置项的报错:Failed to load config “standard“ to extend from.</h2> <p>下载以下依赖：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">add</span> eslint-plugin-promise eslint-plugin-node eslint-plugin-import eslint-plugin-standard eslint-config-standard <span class="token parameter variable">-D</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_10-antd-upload禁止上传-csv文件"><a href="#_10-antd-upload禁止上传-csv文件" class="header-anchor">#</a> 10. antd-upload禁止上传.csv文件</h2> <p>浏览器会把csv当成txt上传，所以需要在beforupload的时候判断一下</p> <h2 id="_11-退回到登录页刷新页面"><a href="#_11-退回到登录页刷新页面" class="header-anchor">#</a> 11. 退回到登录页刷新页面</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mounted() {
+        if (window.history &amp;&amp; window.history.pushState) {
+            history.pushState(null, null, document.URL)
+            window.addEventListener('popstate', () =&gt; location.reload(), false)
+        }
+    },
+    destroyed() {
+        window.removeEventListener('popstate', this.goBack, false)
+    },
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_12-a-input同时绑定keydown-enter和blur事件-解决点击enter会调用两次-keydown、blur"><a href="#_12-a-input同时绑定keydown-enter和blur事件-解决点击enter会调用两次-keydown、blur" class="header-anchor">#</a> 12. a-input同时绑定keydown.enter和blur事件，解决点击enter会调用两次（keydown、blur）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;a-input @keyup.enter.native=&quot;(e) =&gt; e.target.blur()&quot; @blur.prevent=&quot;save('formData')&quot;/&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/web/problem/1.html" class="prev">
+        踩坑1
+      </a></span> <span class="next"><a href="/blog/web/problem/3.html">
+        踩坑3
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.31c239b1.js" defer></script><script src="/blog/assets/js/2.54c8d609.js" defer></script><script src="/blog/assets/js/1.52d342e4.js" defer></script><script src="/blog/assets/js/27.cbc0f2ad.js" defer></script>
+  </body>
+</html>
