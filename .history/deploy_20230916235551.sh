@@ -13,8 +13,8 @@ cd docs/.vuepress/dist
 # echo 'www.aiyun.com' > CNAME
 
 git init
-# git config user.email "xxx@xx.com"
-# git config user.name "xxx"
+git config user.email "2717701215@qq.com"
+git config user.name "aiyun-github"
 git add -A
 git commit -m 'deploy'
 

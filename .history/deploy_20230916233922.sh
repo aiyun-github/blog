@@ -13,17 +13,14 @@ cd docs/.vuepress/dist
 # echo 'www.aiyun.com' > CNAME
 
 git init
-# git config user.email "xxx@xx.com"
-# git config user.name "xxx"
 git add -A
 git commit -m 'deploy'
-
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 # 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
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github:aiyun-github/blog-demo.git master:main
+git push -f git@github:aiyun-github/blog-demo.git master:gh-pages
 # 执行该文件：sh deploy.sh
 
 cd -
